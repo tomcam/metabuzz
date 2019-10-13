@@ -1,0 +1,1 @@
+ create-home-page.bug simply does not render from the Markdown source
