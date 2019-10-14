@@ -2,8 +2,8 @@
 
 
 Markdown uses character formatting conventions you're probably familiar with already.
-This section covers the most common business cases, but VuePress also has a long
-list of [emojis](/tutorial/emoji.md)
+That's by design, since it was meant to mimic what we already do 
+when we use plain text but want to emphasize things.
 
 ## Bold text in Markdown
 
@@ -11,7 +11,7 @@ To make text bold, surround it with `**` on each side. Avoid spaces.
 
 ##### Markdown:
 
-```markdown
+```
 You never expected a **Spanish Inquisition!**
 ```
 
@@ -25,7 +25,7 @@ To make text italic, surround it with `_` on each side. Avoid spaces.
 
 ##### Markdown:
 
-```markdown
+```
 Robert left his space suit at the cleaners. _What will NASA say?_
 ```
 
@@ -39,15 +39,13 @@ To use a monospaced font, surround it with `` ` `` on each side. Avoid spaces.
 
 ##### Markdown:
 
-```markdown
+```
 The killer computer displayed a frightening message: `hello, world.`
 ```
 
 ##### Results:
 
-***
 The killer computer displayed a frightening message: `hello, world.`
-***
 
 ## Strikethough text in Markdown
 
@@ -55,14 +53,12 @@ To show strikethrough text, surround it with two tildes (`~~`) on each side. Avo
 
 ##### Markdown:
 
-```markdown
+```
 Your children are ~~not very~~ well informed.
 ```
 
 ##### Results:
 
-***
 Your children are ~~not very~~ well informed.
-***
 
 Next: [Lines, lists, and blocks of text in markdown](lines-lists-blocks.md)

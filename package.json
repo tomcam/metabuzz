@@ -1,13 +1,13 @@
 {
   "name": "tomim",
   "version": "0.0.1",
-  "description": "Your loose precious gems",
+  "description": "METABUZZ",
   "main": "index.js",
   "authors": {
     "name": "Tom Campbell",
     "email": "tomcampbell@gmail.com"
   },
-  "repository": "https://github.com/tomcam/tomim",
+  "repository": "https://github.com/tomcam/metabuzz",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"

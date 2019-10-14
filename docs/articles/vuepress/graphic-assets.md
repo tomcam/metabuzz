@@ -5,8 +5,18 @@ Assuming you have a file `docs/.vuepress/public/kitten.jpg`, you would refer to 
 
 ```markdown
 
-There's always a picture of a...  ![Federally required Kitten picture](kitten.jpg)
+## It's all about the...  
+
+![Federally required Kitten picture](kitten.jpg)
+
+### Cat pictures
 ```
+
+## It's all about the...  
+
+![Federally required Kitten picture](/assets/img/kitten.jpg)
+
+###  Cat pictures
 
 VuePress will add the necessary path informaion to make it work when the site is built.
 

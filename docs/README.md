@@ -1,8 +1,6 @@
 ---
 pageClass: news
 ---
-# {{ $site.title }}
-
 
 ### New articles: 
 
