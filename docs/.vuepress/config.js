@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Your loose precious gems',
+  title: 'METABUZZ',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -27,31 +27,33 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
+    repo: 'https://github.com/tomcam/metabuzz',
+    editLinks: true,
+    // Github base directory
+    docsDir: '/docs/',
     editLinkText: '',
-    lastUpdated: false,
+    lastUpdated: true,
     nav: [
       {
+	// Mysteriously the .md is implied in the link
         text: 'About',
-        link: 'about.md',
+        link: '/about',
       },
       {
         text: 'Contact',
-        link: 'contact.md'
+        link: '/contact'
       },
     ],
     sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
+      '/articles/' : [
+	{
+	  collapsable: true,
+	  children: [
+            '/articles/',
+      	    '/articles/vuepress/',
+      	    '/articles/github-pages/',
+	  ]
+	}
       ],
     }
   },

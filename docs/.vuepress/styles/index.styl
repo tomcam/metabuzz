@@ -3,21 +3,65 @@
  *
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
  */
-// This is how to change h1
-// What the hell
-// I mean why
-// why?
 html 
-	font-size: 24px
+	font-size: 20px
 
 p, ol, ul, a
 	font-size: 1rem
 
+p, ol, ul
+	line-height: 1.4em
+
+// All this to change h1!
 .theme-default-content:not(.custom) > h1:first-child
-	font-size: 3.5em
-	font-weight: 900
-	line-height: .7em
+	font-size: 2.5em
+	font-weight: 700
+	line-height: .9em
 	margin-top: 1em
 
+h2
+	border-bottom: none
+
+h1
+	color: red
+	
 .site-name
 	font-size: 3em
+
+// News page style
+.theme-container.news {
+h3
+	color: purple
+}
+
+
+// Most images are screen shots. 
+// Give them a light border.
+img
+	display: block
+	width: 66%
+	border: 1px solid lightgray
+	padding: .5em
+	box-shadow: 1px 1px 1px 1px #888888
+
+
+// Color used for strings, variables, etc.
+token.string, .token.char, .token.attr-value, .token.regex, .token.variable
+
+// Comment color
+.token.comment, .token.block-comment, .token.prolog, .token.doctype, .token.cdata
+	color: lighten($textColor, 10%)
+
+// Background color used in code and 
+// it must match the div it's enclosed in
+$code-background-color = #F8F8F8
+
+// The keywords in lines of code themselves
+.theme-default-content pre code, .theme-default-content pre[class*="language-"] code
+	color: darken($textColor, 40%)
+	background-color: $code-background-color
+
+div[class*="language-"] pre, div[class*="language-"] pre[class*="language-"]
+	background-color: $code-background-color
+
+

@@ -1,5 +1,12 @@
+---
+pageClass: news
+---
 # {{ $site.title }}
 
 
-New article: [VuePress 1.x tutorial](/articles/vuepress/) 
+### New articles: 
+
+[VuePress 1.x tutorial](/articles/vuepress/)   
+[GitHub Pages tutorial](/articles/github-pages/)  
+
 
