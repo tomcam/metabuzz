@@ -1,17 +1,60 @@
 /**
+ * THINGS TO FIX
+ * .vuepress/styles/palette.styl controls $codeBgColor
+
+/**
  * Custom Styles here.
  *
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
  */
-html 
+
+// Hip orange:
+// #DF7D2C
+
+// Hip dark blue
+// #3C7EB8
+
+$h1color = #3C7EB8
+$h2color = #DF7D2C 
+
+//@import url('http://fonts.googleapis.com/css?family=Open+Sans|Open Sans')
+@import url('http://fonts.googleapis.com/css?family=Arvo:400,700|Arvo')
+
+// Can now specify font-family: "system"
+// Source:
+// https://css-tricks.com/snippets/css/system-font-stack/#article-header-id-0
+// BUG: Don't think open sans works
+@font-face {
+  font-family: system;
+  font-style: normal;
+  src: local("Open Sans"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+// Custom page class:
+// https://v1.vuepress.vuejs.org/theme/default-theme-config.html#custom-page-class
+
+// Example:
+// https://github.com/pixelandtonic/vuepress-theme-craftdocs/blob/master/styles/override.styl
+.news-page {
+	margin-left: 3em;
+}
+
+
+html
 	font-size: 20px
 
 p, ol, ul, a
 	font-size: 1rem
+	font-family: system
 
 p, ol, ul
 	line-height: 1.4em
 
+
+// Links in upper right navbar
+.nav-links a 
+	font-family: Arvo
+	
 // All this to change h1!
 .theme-default-content:not(.custom) > h1:first-child
 	font-size: 2.5em
@@ -21,21 +64,27 @@ p, ol, ul
 
 h2
 	border-bottom: none
-
-h1
-	color: red
+	//color: $h2color
+	font-family: Arvo, system
+	font-size: 1.75em
 	
+h1
+	font-family: Arvo, system 
+	//color: $h1color 	
+	
+
+// Upper left corner home page link
 .site-name
 	font-size: 3em
-
-
-
+	font-family: Arvo, system
+	letter-spacing: .5em
+	color: #271033
+	color: red
 
 // Most images are screen shots. 
 // Give them a light border.
 img
 	display: block
-	width: 66%
 	border: 1px solid lightgray
 	padding: .5em
 	box-shadow: 1px 1px 1px 1px #888888
@@ -48,16 +97,10 @@ token.string, .token.char, .token.attr-value, .token.regex, .token.variable
 .token.comment, .token.block-comment, .token.prolog, .token.doctype, .token.cdata
 	color: lighten($textColor, 10%)
 
-// Background color used in code and 
-// it must match the div it's enclosed in
-$code-background-color = #F8F8F8
+
 
 // The keywords in lines of code themselves
 .theme-default-content pre code, .theme-default-content pre[class*="language-"] code
 	color: darken($textColor, 40%)
-	background-color: $code-background-color
-
-div[class*="language-"] pre, div[class*="language-"] pre[class*="language-"]
-	background-color: $code-background-color
 
 
