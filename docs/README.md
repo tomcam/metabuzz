@@ -4,7 +4,11 @@
 
 ## New articles: 
 
-[VuePress 1.x tutorial](/articles/vuepress/)   
+## [VuePress 1.x tutorial](/articles/vuepress/)   
+#### by Tom Campbell
+
+![Federally mandated kitten picture](/assets/img/kitten.jpg)
+
 [GitHub Pages tutorial](/articles/github-pages/)  
 
 
