@@ -10,14 +10,37 @@
 // Hip dark blue
 // #3C7EB8
 
+// Another possible palette
+// https://coolors.co/497cb7-edae49-540d6e-05a8aa-e84855
+// Blue: #497CB7
+// Mustard: #EDAE49 but I like #DF7D2C 
+// Purple: #540D6E
+// Cyan: #05A8AA
+// Red: #E84855
+
+// Patua One, Baloo, Kreon
+// A  Arvo
+// A  Aleo
+// B-Copse No heavy 
+// B Kreon 
+// C+ Baloo
+// F  "Patua+One" 
+// Now I can swap out Arvo  
+// This trick only works with 1 word fonts
+$DisplayFont=Aleo
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap')
+@import url('http://fonts.googleapis.com/css?family='+ $DisplayFont + ':400,700|' + $DisplayFont)
+
+
 // Text color of main "home" label
 // on left of sidebar
 $siteNameColor = white
 
 // Background color of top navbar
-$navBarBackground = #3C7EB8
+$navBarBackground = #E84855
 
-// Color of text for top navbar links on top right side
+// Color of links on right top navbar
 $navBarRightColor = white
 
 // Text color of keywords in code blocks
@@ -31,10 +54,7 @@ $blockQuoteColor = black // #383838
 
 // h tag colors
 $h1Color = black 
-$h2Color = #DF7D2C
-
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap')
-@import url('http://fonts.googleapis.com/css?family=Arvo:400,700|Arvo')
+$h2Color = #05A8AA //#DF7D2C
 
 // TODO: Find out why the hell I can't get rid of this. It's a cancer!
 @font-face {
@@ -66,7 +86,7 @@ p, ol, ul
 blockquote:before 
     display: block;
     content: "\201C";
-    font-size: 2.5em
+    font-size: 3.5em
     position: absolute;
     left: -.05em //-20px;
     top: -.25em // -20px;
@@ -74,7 +94,7 @@ blockquote:before
 
 blockquote 
     font-family: Georgia, sans-serif;
-    font-size: 2.5em;
+    font-size: 2rem;
     font-style: italic;
     width: 28rem 
     margin: 1.25em 0;
@@ -98,7 +118,7 @@ blockquote cite:before
 
 // Links in upper right navbar
 .nav-links a 
-	font-family: Arvo
+	font-family: $DisplayFont
 	
 // MAKE NAVBAR CONTRASTING
 header.navbar
@@ -124,18 +144,18 @@ header.navbar .site-name
 	font-weight: 700
 	line-height: 1em
 	margin-top: 1em
-	font-family: Arvo 
+	font-family: $DisplayFont 
 	color: $h1Color 	
 	
 h2
 	border-bottom: none
 	color: $h2Color
-	font-family: Arvo
+	font-family:$DisplayFont 
 	font-size: 1.75em
 	
 
 h3
-	font-family: Arvo
+	font-family:$DisplayFont 
 
 h4
 	font-size: 1em
@@ -146,10 +166,11 @@ h5
 	font-size: 1em
 	text-transform: uppercase
 	font-weight: bold	
+
 // Upper left corner home page link
 .site-name
 	font-size: 3em
-	font-family: Arvo
+	font-family:$DisplayFont 
 	letter-spacing: .5em
 	color: #271033
 	color: red
@@ -162,6 +183,10 @@ img
 	padding: .5em
 	box-shadow: 1px 1px 1px 1px #888888
 
+// Use Arvo for the left sidebar
+.sidebar-link
+  font-weight: bold
+  font-family:$DisplayFont 
 
 // CHANGE HOW CODE IS DISPLAYED
 // Comment color

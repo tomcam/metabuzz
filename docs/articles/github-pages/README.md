@@ -44,5 +44,5 @@ If you're not sure about the advantages of using GitHub pages, see [Why Use GitH
 
 If you want to understand why GitHub pages may not suite your project, see [When to avoid GitHub pages](github-pages-disadvantages.md).
 
-Click [here for the GitHub Pages Tutorial](./docs/README.md).
+Click [here for the GitHub Pages Tutorial](README.md).
 
