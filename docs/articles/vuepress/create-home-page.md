@@ -40,6 +40,10 @@ Let's start a wizard that lets you create an example site with a few files illus
 yarn create vuepress
 ```
 
+> You get a beautiful-looking site with
+> excellent performance, a clean and functional layout, 
+> and header-based search.
+
 ### Answer questions from the wizard
 
 You'll see a lot of output in the console, and then you'll be asked some questions. Here's an example.

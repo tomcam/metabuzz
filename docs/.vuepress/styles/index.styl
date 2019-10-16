@@ -1,8 +1,4 @@
 /**
- * THINGS TO FIX
- * .vuepress/styles/palette.styl controls $codeBgColor
-
-/**
  * Custom Styles here.
  *
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
@@ -21,14 +17,25 @@ $siteNameColor = white
 // Background color of top navbar
 $navBarBackground = #3C7EB8
 
-// Color of text for navbar links on top right side
+// Color of text for top navbar links on top right side
 $navBarRightColor = white
 
+// Text color of keywords in code blocks
+$keywordColor = darken($textColor, 70%)
 
-$h1color = #3C7EB8
-$h2color = #DF7D2C 
+// Text color of comments in code blocks
+$codeCommentColor = darkblue
 
-//@import url('http://fonts.googleapis.com/css?family=Open+Sans|Open Sans')
+// Text color of block quotes
+$blockQuoteColor = black // #383838 
+
+// h tag colors
+$h1Color = black 
+$h2Color = #DF7D2C
+
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+//@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap')
 @import url('http://fonts.googleapis.com/css?family=Arvo:400,700|Arvo')
 
 // Can now specify font-family: "system"
@@ -38,7 +45,7 @@ $h2color = #DF7D2C
 @font-face {
   font-family: system;
   font-style: normal;
-  src: local("Open Sans"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  src: local("Lato"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 
 // Custom page class:
@@ -56,10 +63,44 @@ html
 
 p, ol, ul, a
 	font-size: 1rem
-	font-family: system
+	font-family: 'Lato' 
 
 p, ol, ul
 	line-height: 1.4em
+
+// Big ol' quote character that
+// starts the blockquote
+blockquote:before 
+    display: block;
+    content: "\201C";
+    font-size: 2.5em
+    position: absolute;
+    left: -.05em //-20px;
+    top: -.25em // -20px;
+    color: white // #7a7a7a;
+
+blockquote 
+    font-family: Georgia, sans-serif;
+    font-size: 2.5em;
+    font-style: italic;
+    width: 28rem 
+    margin: 1.25em 0;
+    padding: 01.35em 1em 
+    line-height: 1.45;
+    position: relative;
+    color: $blockQuoteColor 
+    background-color: $accentColor // black
+    color: white
+
+blockquote cite 
+    color: #999999;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+
+
+blockquote cite:before 
+    content: "\2014 \2009";
 
 
 // Links in upper right navbar
@@ -84,56 +125,38 @@ header.navbar .site-name
 	color: $navBarRightColor 
 
 
-/* FAILS
-.search-box input
-	background-color: red
-
-.navbar .links
-	background-color: red
-
-navbar.links
-	background-color: red
-
-.theme-container .navbar .links .search-box
-	background-color: red
-
-.theme-container .site-name
-	color: white
-
-.theme-container .site-name .home-link
-	color: white
-
-
-*/
-
-//.theme-default-content, content__default
-// Make content width about 70 characters
-// to make reading easier.
-//.theme-default-content:not(.custom)
-//	max-width: 40em 	
-
 // All this to change h1!
 .theme-default-content:not(.custom) > h1:first-child
-	font-size: 2.5em
+	font-size: 3.5em
 	font-weight: 700
-	line-height: .9em
+	line-height: 1em
 	margin-top: 1em
-
+	font-family: Arvo 
+	color: $h1Color 	
+	
 h2
 	border-bottom: none
-	//color: $h2color
-	font-family: Arvo, system
+	color: $h2Color
+	font-family: Arvo
 	font-size: 1.75em
 	
-h1
-	font-family: Arvo, system 
-	//color: $h1color 	
-	
 
+h3
+	font-family: Arvo
+
+h4
+	font-size: 1em
+	border-bottom: 3px solid black
+	padding-bottom: .5em
+
+h5
+	font-size: 1em
+	text-transform: uppercase
+	font-weight: bold	
 // Upper left corner home page link
 .site-name
 	font-size: 3em
-	font-family: Arvo, system
+	font-family: Arvo
 	letter-spacing: .5em
 	color: #271033
 	color: red
@@ -147,17 +170,13 @@ img
 	box-shadow: 1px 1px 1px 1px #888888
 
 
-// Color used for strings, variables, etc.
-token.string, .token.char, .token.attr-value, .token.regex, .token.variable
-
+// CHANGE HOW CODE IS DISPLAYED
 // Comment color
 .token.comment, .token.block-comment, .token.prolog, .token.doctype, .token.cdata
-	color: lighten($textColor, 10%)
-
-
+	color: $codeCommentColor 
 
 // The keywords in lines of code themselves
 .theme-default-content pre code, .theme-default-content pre[class*="language-"] code
-	color: darken($textColor, 40%)
+	color: $keywordColor 
 
 

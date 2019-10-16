@@ -1,7 +1,11 @@
-
 # VuePress Tutorial: Version 1.x released September 2019 
 
 ## Creating documentation sites fast with VuePress
+
+
+##### Step-by-step instructions that take you through the complete process with nothing left out
+
+#### by **Tom Campbell**
 
 [VuePress](https://vuepress.vuejs.org) lets you create beautiful,
 searchable, high-performance static websites using simple Markdown

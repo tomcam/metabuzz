@@ -47,7 +47,7 @@ module.exports = {
     sidebar: {
       '/articles/' : [
 	{
-	  collapsable: true,
+	  collapsable: false,
 	  children: [
             '/articles/',
       	    '/articles/vuepress/',
