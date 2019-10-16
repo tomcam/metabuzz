@@ -4,17 +4,23 @@
  * ref：https://v1.vuepress.vuejs.org/zh/config/#palette-styl
  */
 
-// Original: 
-// $accentColor = #3eaf7c
 // Used for links, among other things
 $accentColor = #3C7EB8
 
 // $textColor is inherited all the hell
-// over the place.
+// over the place by default (for
+// example, in the site name and navbar
+// links) but overrides are possible.
 $textColor = #2c3e50
+
+// The single-pixel divider between sidebar and content
 $borderColor = #eaecef
-// vuepress-pallete-styl-textcolor-default.png
-// vuepress-pallete-styl-textcolor-change.png
-// Background color for code blocks
+
+// Make background color for code blocks
+// ligher.
 // Original: #282c34
 $codeBgColor = whitesmoke
+
+// Make content widith about 72 chars
+// to make reading easier
+$contentWidth = 40em

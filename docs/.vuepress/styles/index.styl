@@ -14,6 +14,17 @@
 // Hip dark blue
 // #3C7EB8
 
+// Text color of main "home" label
+// on left of sidebar
+$siteNameColor = white
+
+// Background color of top navbar
+$navBarBackground = #3C7EB8
+
+// Color of text for navbar links on top right side
+$navBarRightColor = white
+
+
 $h1color = #3C7EB8
 $h2color = #DF7D2C 
 
@@ -55,6 +66,52 @@ p, ol, ul
 .nav-links a 
 	font-family: Arvo
 	
+// MAKE NAVBAR CONTRASTING
+header.navbar
+	background-color: $navBarBackground
+
+// Change font color of main "home" label
+// on left of sidebar
+header.navbar .site-name
+	color: $siteNameColor
+
+// Change background color of nav links
+.theme-container .navbar .links
+	background-color: $navBarBackground
+
+// Change color of top right navbar links text.
+.theme-container .navbar 
+	color: $navBarRightColor 
+
+
+/* FAILS
+.search-box input
+	background-color: red
+
+.navbar .links
+	background-color: red
+
+navbar.links
+	background-color: red
+
+.theme-container .navbar .links .search-box
+	background-color: red
+
+.theme-container .site-name
+	color: white
+
+.theme-container .site-name .home-link
+	color: white
+
+
+*/
+
+//.theme-default-content, content__default
+// Make content width about 70 characters
+// to make reading easier.
+//.theme-default-content:not(.custom)
+//	max-width: 40em 	
+
 // All this to change h1!
 .theme-default-content:not(.custom) > h1:first-child
 	font-size: 2.5em
